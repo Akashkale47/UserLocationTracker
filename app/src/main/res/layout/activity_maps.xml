@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tv_Label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="Search Nearby Places"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_id"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Perform by :- Akash Kale (BE16F06F058)"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/tv_Label"
+        />
+
+    <EditText
+        android:id="@+id/TF_Location"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_id"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:layout_marginTop="24dp"
+        android:id="@+id/btn_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_Label"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/tv_id"
+        android:onClick="onClick"
+        android:text="Search" />
+
+    <Button
+        android:id="@+id/btn_Hospitals"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TF_Location"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/TF_Location"
+        android:onClick="onClick"
+        android:text="Hospitals" />
+
+    <Button
+        android:id="@+id/btn_School"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TF_Location"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/btn_Hospitals"
+        android:onClick="onClick"
+        android:text="Schools" />
+
+    <Button
+        android:id="@+id/btn_Theatre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TF_Location"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+
+        android:layout_toRightOf="@+id/btn_School"
+        android:onClick="onClick"
+        android:text="Theatres" />
+
+    <Button
+        android:id="@+id/btn_atm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TF_Location"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/btn_Theatre"
+        android:onClick="onClick"
+        android:text="Atm's" />
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="470dp"
+        android:layout_below="@+id/btn_Hospitals"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        tools:context="com.example.dell.placesearch.MapsActivity" />
+</RelativeLayout>
